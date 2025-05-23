@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BinaryDecimalConverter", "BinaryDecimalConverter\BinaryDecimalConverter.vcxproj", "{DF151578-DA11-4CA1-9888-560242BCCE9D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Çözüm Öğeleri", "Çözüm Öğeleri", "{FCCA709C-66F4-4EC1-A9DE-5E92E95821AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF151578-DA11-4CA1-9888-560242BCCE9D}.Debug|x64.ActiveCfg = Debug|x64
+		{DF151578-DA11-4CA1-9888-560242BCCE9D}.Debug|x64.Build.0 = Debug|x64
+		{DF151578-DA11-4CA1-9888-560242BCCE9D}.Debug|x86.ActiveCfg = Debug|Win32
+		{DF151578-DA11-4CA1-9888-560242BCCE9D}.Debug|x86.Build.0 = Debug|Win32
+		{DF151578-DA11-4CA1-9888-560242BCCE9D}.Release|x64.ActiveCfg = Release|x64
+		{DF151578-DA11-4CA1-9888-560242BCCE9D}.Release|x64.Build.0 = Release|x64
+		{DF151578-DA11-4CA1-9888-560242BCCE9D}.Release|x86.ActiveCfg = Release|Win32
+		{DF151578-DA11-4CA1-9888-560242BCCE9D}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5509308D-A0C9-4FBD-B3CC-0256378746E5}
+	EndGlobalSection
+EndGlobal
