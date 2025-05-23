@@ -12,6 +12,7 @@ void decimalToBinary(int decimal, char* binary);
 int isValidBinary(const char* binary);
 void menu();
 void processFileIO();
+void printAnalysis(const char* binary, FILE* out);
 
 int main() {
     int choice;
@@ -39,6 +40,7 @@ int main() {
 
             int decimal = binaryToDecimal(buffer);
             printf("Result: %d\n", decimal);
+            printAnalysis(buffer, NULL);
 
         }
         else if (choice == 2) { // Decimal to Binary
@@ -54,6 +56,7 @@ int main() {
             char binary[BUFFER_SIZE];
             decimalToBinary(decimal, binary);
             printf("Result: %s\n", binary);
+            printAnalysis(binary, NULL);
 
         }
         else if (choice == 3) { // File I/O
@@ -94,6 +97,7 @@ int binaryToDecimal(const char* binary) {
     if (isNegative) {
         result -= (1 << len);
     }
+    
 
     return result;
 }
@@ -117,6 +121,41 @@ int isValidBinary(const char* binary) {
     }
     return 1;
 }
+
+void printAnalysis(const char* binary, FILE* out) {
+    size_t len = strlen(binary);
+    if (len == 0) return;
+
+    const char* sign;
+    const char* parity;
+
+    // Ýþaret kontrolü: Ýlk bit
+    if (binary[0] == '1') {
+        sign = "Negative";
+    }
+    else {
+        sign = "Positive";
+    }
+
+    // Tek/çift kontrolü: Son bit
+    if (binary[len - 1] == '1') {
+        parity = "Odd";
+    }
+    else {
+        parity = "Even";
+    }
+
+    // Konsola yazdýr
+    printf("Sign (by bits): %s | Parity: %s\n", sign, parity);
+
+    // Dosyaya yazdýr (varsa)
+    if (out != NULL) {
+        fprintf(out, "Sign (by bits): %s | Parity: %s\n", sign, parity);
+    }
+}
+
+
+
 
 // Batch processing from input.txt to output.txt
 void processFileIO() {
@@ -147,6 +186,7 @@ void processFileIO() {
             char binary[BUFFER_SIZE];
             decimalToBinary(decimal, binary);
             fprintf(out, "%d -> %s\n", decimal, binary);
+            printAnalysis(binary, out);
         }
     }
 
